@@ -44,7 +44,7 @@ async function getsongs() {
 }
 
 const playMusic = (track,pause=false) => {
-    currentsongs.src = "/songs/" + track;
+    currentsongs.src = "/song/" + track;
     if(!pause){
     currentsongs.play()
     
