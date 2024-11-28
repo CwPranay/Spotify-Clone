@@ -48,7 +48,7 @@ const playMusic = (track,pause=false) => {
     if(!pause){
     currentsongs.play()
     
-    play.src= "/SVG/pause.svg"}
+    play.src= "./pause.svg"}
     document.querySelector(".songinfo").innerHTML =decodeURI(track)
     
 
@@ -67,13 +67,13 @@ async function main() {
 
     for (const song of songs) {
         songUL.innerHTML = songUL.innerHTML + `<li>
-        <img class="invert music" src="/SVG/music.svg" alt="">
+        <img class="invert music" src="./music.svg" alt="">
         <div class="info">
             <div>${song.replaceAll("%20", " ").replaceAll("%26"," ")}</div>
             <div>Arijt</div>
             
         </div>
-        <img class="invert play1" src="/SVG/play.svg" alt="">
+        <img class="invert play1" src="./play.svg" alt="">
     </li>`
 
 
@@ -101,11 +101,11 @@ async function main() {
     play.addEventListener("click",() => {
       if(currentsongs.paused){
         currentsongs.play();
-        play.src ="/SVG/pause.svg"
+        play.src ="./pause.svg"
       }
       else{
         currentsongs.pause();
-        play.src="/SVG/play.svg"
+        play.src="./play.svg"
       }
     }
     )
@@ -166,10 +166,10 @@ async function main() {
       
       currentsongs.volume = parseInt(e.target.value)/100
       if(e.target.value == 0){
-        document.querySelector(".volume-svg").src ="/SVG/mute.svg"
+        document.querySelector(".volume-svg").src ="./mute.svg"
       }
       else{
-        document.querySelector(".volume-svg").src ="/SVG/volume.svg"
+        document.querySelector(".volume-svg").src ="./volume.svg"
       }
       
     }
